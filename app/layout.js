@@ -1,6 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+/**
+ * RootLayout component.
+ * @param {Object} props - The component props.
+ * @param {JSX.Element} props.children - The child elements.
+ * @returns {JSX.Element} The root layout component.
+ */
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

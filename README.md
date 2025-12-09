@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Inventory Management System
 
-## Getting Started
+A modern Inventory Management System built with **Next.js 15**, **React 19**, and **MongoDB**. This project demonstrates the use of **Next.js Server Actions** for handling form submissions and data mutations directly from the server, eliminating the need for separate API routes.
 
-First, run the development server:
+## 🚀 Features
+
+- **Server Actions**: Perform CRUD operations (Create, Read, Update, Delete) directly on the server.
+- **MongoDB Integration**: Data persistence using **Mongoose** for schema definition and database interaction.
+- **Responsive Design**: Built with **Tailwind CSS v4** for a clean and mobile-friendly user interface.
+- **Unit Testing**: Integrated **Jest** and **React Testing Library** for verifying Server Actions and components.
+- **Optimized Performance**: server-side rendering and efficient database connection caching.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Database**: [MongoDB](https://www.mongodb.com/)
+- **ORM**: [Mongoose](https://mongoosejs.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [React Icons](https://react-icons.github.io/react-icons/)
+- **Testing**: [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/)
+
+## 📋 Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- A [MongoDB](https://www.mongodb.com/) database (local or Atlas)
+
+## 🏁 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd inventory-server-actions
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory and add your MongoDB connection string:
+
+```env
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/inventory-db
+```
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🧪 Running Tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project includes a test suite configured with **Jest**. The tests cover critical Server Actions to ensure data integrity and logic correctness.
 
-## Learn More
+To run the tests:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Run tests once
+npm test
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run tests in watch mode
+npm run test:watch
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📂 Project Structure
 
-## Deploy on Vercel
+```
+├── app/                  # App Router pages and layouts
+│   ├── inventory/        # Inventory implementation (add/edit pages)
+│   ├── page.js           # Home page (List view)
+│   └── ...
+├── components/           # Reusable UI components
+├── models/               # Mongoose schemas (InventoryItem)
+├── utils/                # Utility functions and Server Actions
+│   ├── actions.js        # Server Actions (CRUD logic)
+│   └── connectDB.js      # Database connection helper
+├── __tests__/            # Unit and integration tests
+├── public/               # Static assets
+└── ...
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm start`: Starts the production server.
+- `npm test`: Runs the Jest test suite.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📝 Author
+
+- **[Ricardo Vega](https://github.com/rvega1204)**
